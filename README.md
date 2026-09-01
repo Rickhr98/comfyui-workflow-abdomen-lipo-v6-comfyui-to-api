@@ -1,6 +1,19 @@
 # workflow-abdomen-lipo-v6-comfyUI-to-API
 ComfyUI workflow Dockerized via [comfyui-wizard](https://comfy.getrunpod.io).
 Submission: https://comfy.getrunpod.io/dashboard/submissions/kd7e0hh3r3ksrzm494j3artnad8djk97
+## Pull the prebuilt image
+
+We've already built and published this image on Docker Hub:
+
+```bash
+docker pull runpod/comfyui-wizard:kd7e0hh3r3ksrzm494j3artnad8djk97
+docker run --rm --gpus all -p 8188:8188 runpod/comfyui-wizard:kd7e0hh3r3ksrzm494j3artnad8djk97
+```
+
+Then open http://localhost:8188.
+
+---
+
 ## Build it yourself
 ```bash
 docker build -t my-comfy-workflow .
