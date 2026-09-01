@@ -14,3 +14,6 @@ RUN BACKOFFS="10 20 30 60 90" && for i in 1 2 3 4 5; do HF_TOKEN=$HF_TOKEN comfy
 
 # copy all input data (like images or videos) into comfyui (uncomment and adjust if needed)
 # COPY input/ /comfyui/input/
+
+# user-provided inputs override the auto-generated placeholders above.
+RUN wget --progress=dot:giga -O '/comfyui/input/input.png' "https://cool-anteater-319.convex.cloud/api/storage/cee89b69-1482-4cc0-8d35-64033e23e2ed"
